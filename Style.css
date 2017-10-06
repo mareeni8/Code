@@ -1,0 +1,92 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Judson', serif;
+  font-size: 18px;
+  color: midnightblue;
+}
+
+header {
+    background: floralwhite;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4
+
+}
+
+header nav {
+  position: absolute;
+  left: 90%;
+  bottom: 40px;
+}
+
+
+main {
+  margin-top:200px;
+  padding-right: 320px;
+  position: relative;
+}
+
+h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  color: darkturquoise;
+  padding-left: 40px;
+  }
+  h2 {
+    font-family: 'Pacifico',cursive;
+    font-size: 30px;
+    color: mediumaquamarine;
+
+  }
+  h3 {
+    font-family: 'Pacifico',cursive;
+    font-size: 20px;
+    color: mediumturquoise;
+  }
+
+.top-links{
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    color: darkcyan;
+    display: block;
+    text-align: center;
+}
+
+aside {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 300px;
+  background: floralwhite;
+  left: 90%
+}
+
+.food{
+  display: inline-block;
+  padding: 15px;
+}
+a {
+  font-family: 'Judson', serif;
+  font-size: 18px;
+  color: teal;
+}
+
+article {
+  padding-left: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  overflow: auto;
+}
+
+footer {
+  position:fixed;
+  background: floralwhite;
+  bottom: 0;
+  left: 0;
+  width: 100%
+}
