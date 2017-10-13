@@ -1,35 +1,41 @@
 *{
   box-sizing: border-box;
 }
-
+html {
+  background-color: ivory;
+}
 body{
   font-family: 'Judson', serif;
   font-size: 18px;
   color: midnightblue;
 }
+/*-------------header-------------------*/
 
-header {
-    background: floralwhite;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 4
+.header{
+  height: 120px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: floralwhite;
+  padding: 15px 25px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 5px 0 rgba(243,213,151,.37)
 
 }
 
-header nav {
-  position: absolute;
-  left: 90%;
-  bottom: 40px;
-}
-
-
-main {
-  margin-top:200px;
-  padding-right: 320px;
+.main {
+  padding-right: 200px;
+  padding-top: 200px;
+  padding-bottom: 40px;
+  padding-left: 30px;
   position: relative;
 }
+
+
 
 h1{
   font-family: 'Pacifico', cursive;
@@ -51,30 +57,60 @@ h1{
 
 .top-links{
     font-family: 'Pacifico', cursive;
-    font-size: 20px;
+    font-size: 30px;
     color: darkcyan;
-    display: block;
-    text-align: center;
+    margin: 5px 10px;
+    text-decoration: none;
+    transition: color 1s ease 1s, font-size 2s ease-out;
 }
 
-aside {
+.top-links:hover{
+  font-size: 35px;
+  color: #025858;
+}
+
+.article_readmore-link{
+  font-family: 'Pacifico', cursive;
+  font-size: 18px;
+  color: darkcyan;
+}
+
+.aside {
   position: absolute;
   right: 0;
-  top: 0;
-  width: 300px;
+  bottom: 0;
+  top: 120px;
+  width: 200px;
   background: floralwhite;
-  left: 90%
+  /*left: 90%;*/
+  padding: 20px 30px 20px 10px;
+  /*padding-top: 40px;*/
+}
+.aside_heading{
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.nav_for_aside{
+  margin-bottom: 15px;
 }
 
+.aside_links{
+  font-family: 'Pacifico',cursive;
+  font-weight: 600;
+  color: darkcyan;
+  /*border-bottom: 1px solid rgba(243,213,151,.37);*/
+  text-decoration: none;
+  font-style: normal;
+  transition: color 1s ease 1s, font-size 2s ease-out;
+}
+.aside_links:hover {
+  font-size: 35px;
+}
 .food{
   display: inline-block;
   padding: 15px;
 }
-a {
-  font-family: 'Judson', serif;
-  font-size: 18px;
-  color: teal;
-}
+
 
 article {
   padding-left: 20px;
@@ -83,10 +119,386 @@ article {
   overflow: auto;
 }
 
-footer {
-  position:fixed;
+.footer {
+    font-family: 'Pacifico',cursive;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /*position:fixed;*/
   background: floralwhite;
+  font-size: 16px;
+  line-height: 20px;
+  color: darkcyan;
   bottom: 0;
   left: 0;
-  width: 100%
+  width: 100%;
+  padding: 10px 30px;
+}
+
+.footer_tel{
+  margin: 0;
+}
+.footer_email{
+  margin: 0;
+}
+.footer_tel_link{
+  color: darkcyan;
+  border-bottom: 2px solid teal;
+  text-decoration: none;
+}
+.footer_email_link{
+  color: darkcyan;
+  border-bottom: 2px solid teal;
+  text-decoration: none;
+}
+/* background-img*/
+
+.background-img-svg {
+  width: 700px;
+  height: 100px;
+  margin: 100px;
+  background-image: url("img/shrimp.svg");
+  background-repeat: repeat;
+}
+
+.background-img-img {
+  width: 300px;
+  height: 100px;
+  margin: 100px;
+  background-image: url("img/img-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;:
+}
+
+
+
+
+
+
+
+/*flexbox*/
+
+.flex-container {
+  display: flex;
+  height: 400px;
+  background-color: seashell;
+  border: 1px solid blue;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: center;
+  /*align-items: center;*/
+  align-content: stretch;
+}
+
+.flex-element {
+  width: 300px;
+}
+
+.flex-element-1 {
+  background-color: green;
+  order:5;
+}
+
+.flex-element-2 {
+  background-color: seagreen;
+  order: 3;
+}
+
+.flex-element-3 {
+  background-color: mediumseagreen;
+  order: 1;
+  flex-grow: 5;
+
+}
+
+.flex-element-4 {
+  background-color: springgreen;
+  order: 4;
+}
+
+.flex-element-5 {
+  background-color: palegreen;
+  order: 2;
+}
+/* --------------Background color---------*/
+.background-color{
+  width:200px;
+  height: 200px;
+  background-color: salmon;
+  position: relative;
+}
+
+.background-color-child{
+  width:200px;
+  height: 200px;
+  background-color: peachpuff;
+  background-image: url("img/wine.svg");
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  border: 1px solid red;
+}
+
+/* -------gradient------*/
+
+.linear-gradient{
+  background-image: linear-gradient(lime, gold);
+  width:200px;
+  height: 200px;
+  margin: 60px;
+}
+
+.linear-gradient-1{
+  background-image: linear-gradient(to top left, olive, gold);
+  width:200px;
+  height: 200px;
+  margin: 60px;
+}
+
+.linear-gradient-2{
+  background-image: linear-gradient(90deg, papayawhip, chocolate);
+  width:200px;
+  height: 200px;
+  margin: 60px;
+}
+.linear-gradient-3{
+  background-image: linear-gradient(papayawhip, firebrick, peachpuff);
+  width:200px;
+  height: 200px;
+  margin: 60px;
+}
+.linear-gradient-4{
+  background-image: linear-gradient(gold 15%, sienna 60%, peachpuff 40%, skyblue);
+  width:200px;
+  height: 200px;
+  margin: 60px;
+}
+/*---------radial-gradient---------------*/
+
+.radial-gradient{
+  width:200px;
+  height: 200px;
+  margin: 60px;
+  background-image: radial-gradient(honeydew, navy);
+}
+.radial-gradient-1{
+  width:200px;
+  height: 200px;
+  margin: 60px;
+  background-image: radial-gradient(at left bottom, mistyrose, aquamarine);
+}
+.radial-gradient-2{
+  width:200px;
+  height: 200px;
+  margin: 60px;
+  background-image: radial-gradient( circle, honeydew, lightgreen);
+}
+
+
+.gradient-generator{
+  width:200px;
+  height: 200px;
+  margin: 60px;
+  background-image: radial-gradient(ellipse at center, #78ccae 3%,#d8f2f2 26%,#d8f2f2 26%,#b0e4e6 52%,#d8eff2 72%,#d9f3ef 86%,#f5fbf6 100%);
+}
+
+
+.box-shadow{
+  width:250px;
+  height: 150px;
+  margin: 70px;
+  box-shadow: 10px 15px 5px 1px navy;
+  background-color: honeydew;
+  border: 2px solid skyblue;
+}
+.box-shadow-inset {
+  width:250px;
+  height: 150px;
+  margin: 70px;
+  box-shadow: inset 0px 2px 40px 20px salmon;
+  background-color: lightsalmon;
+  border: 2px solid red;
+}
+
+.calc-parent{
+  height: 300px;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom:30px;
+  display: flex;
+  border: 1px solid salmon;
+
+}
+.calc-child{
+width: calc(50% - 20px);
+margin: 0 10px;
+background-color: blue;
+}
+.calc-parent-part{
+  display: flex;
+  height: 200px;
+  border: 1px solid red;
+
+}
+.calc-child-part{
+  display: flex;
+  margin: 0 5px;
+  background-color: gold;
+  width: calc(100% / 7 - 10px);
+}
+
+.calc-parent-2{
+  display: flex;
+  height: 200px;
+  border: 1px solid gray;
+  margin: 50px;
+
+
+}
+
+.calc-child-responsive{
+  width: calc(100% - 70px);
+  background-color: lightsalmon;
+}
+.calc-child-fixed{
+  background-color: pink;
+  width: 50px;
+  margin-left: 20px;
+
+}
+
+.hover{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 20px;
+  margin-bottom: 200px;
+}
+.hover:hover {
+  background-color: black;
+}
+
+.link-hover{
+  color: lime;
+  font-size: 36px;
+}
+.link-hover:hover{
+  text-decoration: none;
+  color: black;
+}
+
+.focus{
+height: 50px;
+border: 1px solid firebrick;
+border-radius: 10px;
+outline: 0;
+padding: 10px;
+width: 150px;
+}
+.focus:focus{
+  box-shadow: inset 0 0 15px 0 rgba(0,0,0,.8)
+}
+
+.body-components{
+  background-color: linen;
+}
+/* pseudo-class experement*/
+
+.pseudo-classes-parent{
+  padding: 20px;
+  border: 1px dashed brown;
+  margin-top: 20px;
+}
+.pseudo-classes-child{
+  height: 20px;
+  margin: 20px;
+  border: 1px solid orange;
+}
+.pseudo-classes-child:first-child{
+  background-color: skyblue;
+  margin-top: 0;
+}
+.pseudo-classes-child:last-child{
+  background-color: red;
+  margin-bottom: 0;
+}
+
+.pseudo-classes-child:nth-child(odd){
+  background-color: navy;
+}
+
+.pseudo-elements:before {
+  content: 'Oi Doi Oi';
+  color: red;
+}
+.pseudo-elements:after {
+  content: 'Troi Oi';
+  color: blue;
+}
+
+/* transition*/
+
+.transition-color{
+  font-size: 30px;
+  color:aquamarine;
+  transition: color 1s ease 1s, font-size 2s ease-out;
+}
+.transition-color:hover {
+  color: dimgray;
+  font-size: 50px;
+}
+
+.transition-left{
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  position: relative;
+  left: 0;
+  transition: left 3s ease-in 1s, width 2s linear;
+}
+.transition-left:hover{
+  left: 200px;
+  width: 300px;
+}
+
+
+/* jumping balls*/
+.balls {
+  width: 4em;
+  height: 4em;
+  margin-top: 6em;
+  background: transparent;
+  border-radius: 70%;
+  justify-content: space-between;
+  box-shadow:
+    2em 0 0 lightsalmon,
+    4em 0 0 indianred,
+    6em 0 0 coral,
+    8em 0 0 floralwhite,
+    10em 0 0 peachpuff,
+    12em 0 0 darksalmon,
+    14em 0 0 tan,
+    16em 0 0 chocolate,
+    18em 0 0 tomato,
+    20em 0 0 salmon;
+    animation: boxshadow 3s infinite;
+}
+
+@keyframes boxshadow {
+  50% {
+    box-shadow:
+      16em 0 0 chocolate,
+      12em 0 0 darksalmon,
+      2em 0 0 lightsalmon,
+      18em 0 0 tomato,
+      6em 0 0 coral,
+      10em 0 0 peachpuff,
+      4em 0 0 indianred,
+      20em 0 0 salmon,
+      8em 0 0 floralwhite,
+      14em 0 0 tan;
+  }
 }
