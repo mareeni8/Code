@@ -1,3 +1,5 @@
+@import url("grid.css");
+
 *{
   box-sizing: border-box;
 }
@@ -500,5 +502,193 @@ width: 150px;
       20em 0 0 salmon,
       8em 0 0 floralwhite,
       14em 0 0 tan;
+  }
+}
+
+
+/* transform translate*/
+
+.transform_parent{
+  display: flex;
+  margin: 50px;
+}
+
+.translate_parent{
+  width: 300px;
+  height: 200px;
+  margin:30px;
+  position: relative;
+  background-color: gray;
+
+}
+
+.translate_child{
+  width:100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(255,255,255,.5);
+  border: 2px solid black;
+}
+
+.translate_child-1{
+  transform: translate(100px);
+  z-index: 2;
+}
+.translate_child-2{
+  transform: translate(80px,30px);
+}
+
+.rotate-parent{
+  width: 300px;
+  height: 200px;
+  margin:30px;
+  position: relative;
+  background-color: gray;
+
+}
+
+.rotate-child{
+  width:100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(255,255,255,.5);
+  border: 2px solid black;
+}
+
+.rotate-child-1{
+  transform: rotate(100deg);
+}
+
+.rotate-child-2{
+  transform: rotate(-30deg);
+}
+
+.scale-parent{
+  width: 300px;
+  height: 200px;
+  margin:30px;
+  position: relative;
+  background-color: gray;
+
+}
+
+.scale-child{
+  width:100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(255,255,255,.5);
+  border: 2px solid black;
+}
+.scale-child-1{
+  transform: scale(2.5);
+}
+
+.scale-child-2{
+  transform:scale(-1, .5);
+}
+
+.skew-parent{
+  width: 300px;
+  height: 200px;
+  margin:30px;
+  position: relative;
+  background-color: gray;
+
+}
+
+.skew-child{
+  width:100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(255,255,255,.5);
+  border: 2px solid black;
+}
+.skew-child-1{
+  transform: skew(-70deg);
+}
+
+.skew-child-2{
+  transform:skew(-10deg, 50deg);
+}
+
+.transform-origin-parent{
+  width: 300px;
+  height: 200px;
+  margin:30px;
+  position: relative;
+  background-color: gray;
+
+}
+
+.transform-origin-child{
+  width:100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(255,255,255,.5);
+  border: 2px solid black;
+  transform: rotate(45deg);
+}
+
+/*animation*/
+.animation-1{
+  width: 300px;
+  height: 300px;
+  border: 2px dashed orange;
+  background-color: red;
+  animation-name: animation-bg-color;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.animation-1:hover{
+  animation-play-state: paused;
+}
+@keyframes animation-bg-color {
+  from{
+    background-color: yellow;
+    transform: translate(0,0);
+    width:300px;
+    box-shadow: 0 0 5px 5px rgba(255,255,255,.6);
+  }
+  to{
+    background-color: goldenrod;
+    transform: translation(50px,100px);
+    width:500px;
+    box-shadow: 0 0 50px 50px rgba(255,255,255,1);
+  }
+}
+.animation-2{
+  width: 300px;
+  height: 300px;
+  background-color: gold;
+  opacity:0,8;
+  animation-name: animation-rotate;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+
+}
+@keyframes animation-rotate{
+  0%{
+    transform: rotate(0);
+  }
+
+  50%{
+    transform: rotate(-90deg);
+  }
+
+
+  100%{
+    transform: rotate(360deg);
   }
 }
