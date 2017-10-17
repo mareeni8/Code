@@ -96,7 +96,7 @@ h1{
   margin-bottom: 15px;
 }
 
-.aside_links{
+.article_aside-link{
   font-family: 'Pacifico',cursive;
   font-weight: 600;
   color: darkcyan;
@@ -691,4 +691,10 @@ width: 150px;
   100%{
     transform: rotate(360deg);
   }
+}
+
+/*---------------------------*/
+
+.toggled{
+  background-color: salmon;
 }
