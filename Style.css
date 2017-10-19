@@ -4,13 +4,16 @@
   box-sizing: border-box;
 }
 html {
-  background-color: ivory;
+background-image: linear-gradient(rgba(173, 255, 47, 0.46), forestgreen);
 }
 body{
   font-family: 'Judson', serif;
   font-size: 18px;
   color: midnightblue;
 }
+/* ------------Main page (index.html)----------*/
+
+
 /*-------------header-------------------*/
 
 .header{
@@ -19,71 +22,108 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  background-color: floralwhite;
+  background-image: linear-gradient(rgba(173, 255, 47, 1), forestgreen) ;
+  /*background-image: url("img/jungles.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;*/
   padding: 15px 25px;
   z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 5px 0 rgba(243,213,151,.37)
+  box-shadow: -1px 1px 20px 9px rgba(238, 145, 255, 0.46), inset -1px -6px 20px 1px rgba(238, 145, 255, 0.46);
 
 }
+/*-------------Main--------------*/
 
 .main {
-  padding-right: 200px;
-  padding-top: 200px;
+  padding-right:200px;
+  padding-top: 100px;
   padding-bottom: 40px;
   padding-left: 30px;
   position: relative;
 }
 
+.short_articles {
+  padding-top: 30px;
+}
+
+.article-shorts {
+  display: flex;
+  padding: 10px;
+  padding-right: 10px;
+  background-color: palegreen;
+  box-shadow: 0px 0px 20px 5px rgba(211, 0, 255, 0.5);
+  margin-bottom: 50px;
+  margin-right: 15px;
+}
+
+.main_shorts_img{
+  flex-basis: 150px;
+   flex-shrink: 0;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   margin-right: 20px;
+   display: flex;
+}
+
+.article-heading{
+  font-family: 'Pacifico',cursive;
+  font-size: 25px;
+  color: #9520ad;
+  text-shadow: 12px 6px 5px limegreen;
+}
 
 
 h1{
   font-family: 'Pacifico', cursive;
   font-size: 60px;
-  color: darkturquoise;
+  color: lightyellow;
   padding-left: 40px;
   }
   h2 {
     font-family: 'Pacifico',cursive;
     font-size: 30px;
-    color: mediumaquamarine;
+    color: #9520ad;
+    text-shadow: 12px 6px 5px limegreen;
 
   }
   h3 {
     font-family: 'Pacifico',cursive;
     font-size: 20px;
-    color: mediumturquoise;
+    color: lightyellow;
   }
 
 .top-links{
     font-family: 'Pacifico', cursive;
     font-size: 30px;
-    color: darkcyan;
+    color: lightyellow;
     margin: 5px 10px;
     text-decoration: none;
-    transition: color 1s ease 1s, font-size 2s ease-out;
+    transition: color .3s ease .3s, font-size 0.3s ease-out;
 }
 
 .top-links:hover{
   font-size: 35px;
-  color: #025858;
+  color: #9520ad;
 }
 
 .article_readmore-link{
   font-family: 'Pacifico', cursive;
-  font-size: 18px;
-  color: darkcyan;
+  font-size: 20px;
+  color: rgba(211, 0, 255, 1);
 }
-
+/*--------------Aside-------------*/
 .aside {
   position: absolute;
   right: 0;
   bottom: 0;
   top: 120px;
   width: 200px;
-  background: floralwhite;
+  background-image: linear-gradient(rgba(173, 255, 47, 0.46), forestgreen) ;
+  box-shadow: inset rgba(255,255,255,0.2) 8px  8px 18px 5px,
+             inset rgba(0,0,0,0.5)      -8px -8px 18px 5px;
   /*left: 90%;*/
   padding: 20px 30px 20px 10px;
   /*padding-top: 40px;*/
@@ -91,68 +131,265 @@ h1{
 .aside_heading{
   margin-top: 0;
   margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 12px 6px 5px limegreen;
+  animation-name: turningHeading;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-direction: reverse;
 }
+
+@keyframes turningHeading {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+
+}
+
 .nav_for_aside{
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .article_aside-link{
   font-family: 'Pacifico',cursive;
   font-weight: 600;
-  color: darkcyan;
+  font-size: 30px;
+  color: lightyellow;
   /*border-bottom: 1px solid rgba(243,213,151,.37);*/
   text-decoration: none;
   font-style: normal;
-  transition: color 1s ease 1s, font-size 2s ease-out;
+  /*transition: color 1s ease 1s, font-size 2s ease-out;*/
 }
-.aside_links:hover {
+/*.aside_links:hover {
   font-size: 35px;
-}
+}*/
 .food{
   display: inline-block;
   padding: 15px;
 }
 
-
-article {
-  padding-left: 20px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  overflow: auto;
-}
-
+/* -------------------Footer------------------*/
 .footer {
     font-family: 'Pacifico',cursive;
   display: flex;
   justify-content: space-around;
   align-items: center;
   /*position:fixed;*/
-  background: floralwhite;
-  font-size: 16px;
+  background-image: url("img/jungles.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 20px;
   line-height: 20px;
-  color: darkcyan;
+  color: lightyellow;
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 10px 30px;
+  text-decoration: none;
 }
 
 .footer_tel{
   margin: 0;
+
+
 }
 .footer_email{
   margin: 0;
+
 }
 .footer_tel_link{
-  color: darkcyan;
-  border-bottom: 2px solid teal;
+  color: lightyellow;
+  border-bottom: 2px solid lightyellow;
   text-decoration: none;
 }
 .footer_email_link{
-  color: darkcyan;
-  border-bottom: 2px solid teal;
+  color: lightyellow;
+  border-bottom: 2px solid lightyellow;
   text-decoration: none;
 }
+
+
+
+/* --------- Contacts------------*/
+
+.main_contacts{
+  height: 700px;
+    padding-right:200px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    position: relative;
+    /*background-image: url("img/palmback.jpg");
+    background-size: cover;
+    background-repeat: repeat-y;*/
+}
+
+/*----------Gallery-------------*/
+.main-gallery{
+  margin-top: 60px;
+  padding-right:200px;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  padding-left: 30px;
+  position: relative;
+  margin-left: 15%;
+}
+.gallery-body div{
+    box-shadow: 0px 0px 20px 5px rgba(211, 0, 255, 0.55);
+}
+.gallery-body {
+  display: grid;
+  /*min-height: 100vh;*/
+  grid-template-columns:256px 256px;
+  grid-template-rows:repeat(6, 256px);
+}
+.l1-2_t1 {
+  background-image: url('gallery/img-8.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin: 20px;
+}
+.l3_t1{
+  background-image: url('gallery/img-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin: 20px;
+}
+.l4-5_t1{
+  background-image: url('gallery/img-7.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-row-start: 4;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin: 20px;
+}
+.l1_t2{
+  background-image: url('gallery/img-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: 20px;
+}
+.l2_t2{
+  background-image: url('gallery/img-9.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: 20px;
+}
+.l3-4_t2{
+  background-image: url('gallery/img-10.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: 20px;
+}
+
+.dTp {
+  visibility: hidden;
+
+}
+.dTp:hover{
+  visibility: visible;
+}
+.l5_t2{
+  background-image: url('gallery/img-5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: 20px;
+}
+
+/*--------------trying to go Grid for all pages----------*/
+
+.grid_for_project {
+    display: grid;
+    grid-template-columns:85% 15%;
+    grid-template-rows:15% 75% 10%;
+    }
+
+.headerForEverything{
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.mainForEverything{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.bodyForEverything{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.asideForEverything{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.footerForEverything{
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+
+/*--------------Article 1 - Ao Dai--------------*/
+
+.navForArticle{
+  font-family: 'Judson',cursive;
+  color: #471365;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+
+
+
+
+
+/*Эксперементы и прочее прочее*/
 /* background-img*/
 
 .background-img-svg {

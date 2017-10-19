@@ -7,35 +7,49 @@
     <link href="https://fonts.googleapis.com/css?family=Judson|Pacifico&amp;subset=vietnamese" rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
 
+
   </head>
   <body>
     <!-- here will be body of doc-->
+    <!-- trying grid-->
+  <div class="grid_for_project">
+    <div class="headerForEverything">
       <header class="header">
-      <h1 class="header_top">Hà Nội</h1>
-      <nav class="TopLinks">
+        <h1 class="header_top">Hà Nội</h1>
+        <nav class="TopLinks">
         <a href="contacts.html" class="top-links">Contacts</a>
         <a href="index.html" class="top-links">Main</a>
-      </nav>
-    </header>
-
+        <a href="gallery.html" class="top-links">Gallery</a>
+        </nav>
+      </header>
+    </div>
+    <div class="mainForEverything">
     <main class="main">
-      <section>
-        <h2>Articles</h2>
-        <article id="article_1" class="article-shorts">
+      <div class="bodyForEverything">
+        <section class="short_articles">
+          <article id="article_1" class="article-shorts short-1">
+            <div class="main_shorts_img" style="background-image: url('img/aodai.jpg'); background-position: top right; "></div>
+            <div class="main_shorts_body">
           <h3 class="article-heading">Áo Dài</h3>
           <p>The áo dài is a Vietnamese traditional clothing, now most commonly worn by women but can also be worn by men. In its current form, it is a tight-fitting silk tunic worn over trousers.In modern life Aozai is worn by Vietnamese women at festive events, in a solemn atmosphere, and it is also a uniform of schoolgirls, female students and employees of many companies in Vietnam. </p>
           <div class="article_readmore">
             <a href="article_1.html" class="article_readmore-link">Read more about Áo Dài</a>
           </div>
+        </div>
         </article>
-        <article id="article_2" class="article-shorts">
+        <article id="article_2" class="article-shorts short-2">
+          <div class="main_shorts_img" style="background-image: url('img/pho.jpg'); background-position: top right; "></div>
+          <div class="main_shorts_body">
           <h3 class="article-heading">Street food</h3>
           <p>Comprised of chaos and charm in equal parts, Hanoi's Old Quarter is both fun to explore and a foodie's dream, offering some of the best street food in the world. Small local street food eateries are everywhere in Hanoi, with the smoke from chargrilled pork wafting through the streets and a bubbling stockpot of fragrant pho on every corner, and not a McDonalds in sight. Here you can read about top Hanoi street food dishes, which you would like to try for sure!</p>
           <div class="article_readmore">
             <a href="article_2.html" class="article_readmore-link">Read more about street food</a>
           </div>
+        </div>
         </article>
       </section>
+    </div>
+    <div class="asideForEverything">
       <aside class="aside">
         <h2 class="aside_heading">Discover more!</h2>
         <nav class="nav_for_aside">
@@ -51,7 +65,10 @@
         <div id="showMe"> Show me one more alert!</div>
         <div id="eventListener">Will you do it one more time?:)</div>
       </aside>
+    </div>
     </main>
+  </div>
+  <div class="footerForEverything">
     <footer class="footer">
       <section class="footer_section">
         <p class="footer_tel"><a href="tel:+79168082927" class="footer_tel_link">Call us.</a></p>
@@ -60,8 +77,10 @@
         <p class:"footer_email">E-mail:<a href="mailto:mareeni8@gmail.com" class="footer_email_link">mareeni8@gmail.com</a></p>
       </section>
     </footer>
+  </div>
 
     <script src="script.js">
     </script>
+  </div>
   </body>
 </html>
