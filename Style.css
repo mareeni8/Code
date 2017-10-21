@@ -246,6 +246,7 @@ h1{
   /*min-height: 100vh;*/
   grid-template-columns:256px 256px;
   grid-template-rows:repeat(6, 256px);
+  grid-gap: 20px;
 }
 .l1-2_t1 {
   background-image: url('gallery/img-8.jpg');
@@ -315,11 +316,14 @@ h1{
 }
 
 .dTp {
-  visibility: hidden;
+  height: 100%;
+  background-color: rgba(211, 0, 255, 0.26);
+  color: white;
+  opacity:0;
 
 }
 .dTp:hover{
-  visibility: visible;
+  opacity:1;
 }
 .l5_t2{
   background-image: url('gallery/img-5.jpg');
@@ -337,8 +341,9 @@ h1{
 
 .grid_for_project {
     display: grid;
+    min-height: 100vh;
     grid-template-columns:85% 15%;
-    grid-template-rows:15% 75% 10%;
+    grid-template-rows:15% 1fr 10%;
     }
 
 .headerForEverything{
